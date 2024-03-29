@@ -55,10 +55,12 @@ public class Product {
 
     // methods
 
-    double getBasePrice(double price, int iva) {
+    public double getBasePrice(double price, int iva) {
 
         double productIva = (price * iva) / 100;
         double basePrice = price - productIva;
         return basePrice;
     }
+
+
 }
