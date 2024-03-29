@@ -45,6 +45,14 @@ public class Product {
         return iva;
     }
 
+    public int getCode() {
+        return code;
+    }
+
+    public String getName() {
+        return name;
+    }
+
     // constructor
 
 
@@ -60,6 +68,20 @@ public class Product {
         double productIva = (price * iva) / 100;
         double basePrice = price - productIva;
         return basePrice;
+    }
+
+    public String getFullName(int code, String name) {
+        String stringCode = Integer.toString(code);
+        if(stringCode.length() < 8) {
+            String padded = String.format("%8d", Integer.parseInt(stringCode));
+            String fullName = padded + "-" + name;
+            return fullName;
+        } else {
+            String fullName = stringCode + "-" + name;
+            return fullName;
+        }
+
+
     }
 
 
