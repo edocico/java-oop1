@@ -24,7 +24,8 @@ public class Main {
 
         double consoleBasePrice = console.getBasePrice(consolePrice, consoleIva);
 
-        System.out.println(consoleBasePrice);
+        System.out.println("prezzo senza iva:" + " " + consoleBasePrice);
+        System.out.println("prezzo con iva:" + " " + consolePrice);
 
     }
 }
