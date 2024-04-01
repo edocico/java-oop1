@@ -4,7 +4,7 @@ package org.experis.oop1.javabank;
 import java.util.Random;
 
 public class BankAccount {
-    // attributi
+    // attribute
     private int accountNumber;
     private String accountOwner;
     private double balance;

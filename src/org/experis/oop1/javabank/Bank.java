@@ -24,7 +24,11 @@ public class Bank {
         String exit = "esci";
         double balance = account.getBalance();
 
+        // variabile di controllo ciclo
+
         boolean isDone = false;
+
+        // ciclo do while
 
         do {
             System.out.println("Quale operazione vuoi fare ? hai tre comandi: deposita , preleva , esci");
@@ -41,11 +45,11 @@ public class Bank {
                 System.out.println("quanto vuoi ritirare? scrivi la cifra");
                 int answer = scan.nextInt();
                 double balance2 = account.getBalance();
-                if (balance2 < answer || balance == 0) {
+                if (balance2 < answer || balance2 == 0) {
                     System.out.println("operazione impossibile saldo non sufficiente");
                     System.out.println("il tuo conto ha:" + " " + balance2);
                 } else if (balance2 >= answer) {
-                    double newBalance = account.depositMoney(answer);
+                    double newBalance = account.withdrawMoney(answer);
                     account.setBalance(newBalance);
                     System.out.println("operazione completata");
                     System.out.println("il tuo nuovo saldo è:" + " " + newBalance);
